@@ -1,4 +1,5 @@
-# NorthEastWS
+# NorthEastWS (ReadMe Description History Tracker). TXT file to track past text used for readme for future use. 
+
 A news aggregator web application that lets you peruse news articles for your main course. On the side, it analyzes the sentiment surrounding the news in the twitter-verse. 
 
 Features
