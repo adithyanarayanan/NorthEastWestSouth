@@ -1,1 +1,1 @@
-Source code (all the scripts) that runs the project. Find their descriptions below.
+Source code that runs the project. Find their descriptions below.
