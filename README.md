@@ -12,7 +12,7 @@ Features
 
 The statistics are calculted by filtering out irrelevant comments and studying the polarity of the rest. 
 
-Further statistics can also be calculated w.r.t news articles with further versions
+Further statistics can also be calculated w.r.t news articles with subsequent versions
 -- 
 1. How toxic are the discussions surrounding the articles
 2. How partisan are the headlinesdescriptions of the articles
