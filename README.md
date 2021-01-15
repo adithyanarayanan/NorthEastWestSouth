@@ -2,6 +2,8 @@
 
 A news aggregator web application that lets you peruse news articles for your main course. On the side, it analyzes the sentiment surrounding the news in the twitter-verse. 
 
+Packages Needed: TwitterAPI, tweepy, pandas, json, time
+
 Features
 --
 1. Retrieves the news article's weblink. Sorts articles by topics using Topic Modeling techniques and consolidates the retrieved articles by categories.
