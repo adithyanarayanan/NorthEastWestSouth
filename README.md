@@ -2,7 +2,7 @@
 
 A news aggregator web application that lets you peruse news articles for your main course. On the side, it analyzes the sentiment surrounding the news in the twitter-verse. 
 
-Packages Needed: TwitterAPI, tweepy, pandas, json, time
+Packages Needed: TwitterAPI, tweepy, pandas, json, time, preprocessor, nltk, vaderSentiment, spacytextblob
 
 Features
 --
