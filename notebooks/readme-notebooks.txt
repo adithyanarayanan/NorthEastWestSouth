@@ -1,6 +1,19 @@
 For all the data files to be used in the project.
 Find their descriptions below. 
 
+
+1. News_Category_Estimators.ipynb: Notebook implementing SVC, MNB and Logistic News Category Classifiers on diverse data
+2. labeled_tweets.csv : 500 annotated news tweets
+3. bbc_news.csv: BBC News Headline Category Dataset https://www.kaggle.com/c/learn-ai-bbc
+4. large_news_data.csv: News Category Dataset https://www.kaggle.com/rmisra/news-category-dataset
+
+
+
+
+
+
+Before Feb 4:
+
 1. News Classification (Logistic)- Million Headlines Data.ipynb - Classifies News based on
 					News_Category_Dataset_v2.json
 					- training a news classification model
