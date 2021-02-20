@@ -10,3 +10,5 @@ Packages needed: TwitterAPI, tweepy, pandas, json, time
 
 - retrieve_sentiments.py: Analyzes tweet replies and allocated them sentiment/polarity and subjectivity scores
 			using both nltk vader and spacy-textblob
+
+- app.py : Renders a Dash App that displays tweets

@@ -5,14 +5,17 @@
 
 import pandas as pd
 import time
+import requests
 import tweepy
 from TwitterAPI import TwitterAPI, TwitterOAuth, TwitterRequestError, TwitterConnectionError
 
 
-consumer_key= "MFg6zCjk0ieHKB9q5oxKkOT2D"
-consumer_secret= "hTIdnRbNs1J6biailaVIogTvhIS8OYm4eLv4PHSOGrSX2RUbeo"
-access_token_key= "2515973623-3XU4n5BkGyyoCAIyicvj08trw5jb82nDCEUmr8E"
-access_token_secret= "2hFyxjowGDZwiF3XzAVaOzSnylfAU5MnTj9PF8jGxBtyT"
+# Replace with own keys when using
+consumer_key= ""
+consumer_secret= ""
+access_token_key= ""
+access_token_secret= ""
+bearer_token = ""
 
 # TWeepy Authentication
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -33,8 +36,11 @@ def get_new_tweets(names):
         time.sleep(4)
         corpus.extend(tweets)                                                                          # add current retrieval of tweets to our corpus
 
-    data = [[tweet.id_str, tweet.user.screen_name, tweet.full_text, tweet.created_at] for tweet in corpus]
-    news = pd.DataFrame(data, columns=['tweet_id', 'screen_name', 'text', 'timestamp'])                # creates a dataframe with the retrieved tweets
+    data = [[tweet.id_str, tweet.user.screen_name, tweet.full_text, tweet.created_at] for tweet in
+            corpus]
+    news = pd.DataFrame(data, columns=['tweet_id', 'screen_name', 'text', 'timestamp'])                #
+    # creates a
+    # dataframe with the retrieved tweets
 
     return news
 
@@ -76,10 +82,32 @@ def add_data(news):
     news['conversation_id'] = conv_ids
     return news
 
+"""
+Retrieves embeddable HTML code for every tweet
+The HTML code will be rendered in the Dash App rendered by app.py
+"""
+def get_oembed_link(string):
+    json_embed = requests.get('https://publish.twitter.com/oembed?url=' + string)
+    return json_embed.json()['html']
+
+
+"""
+Applies get_oembed_link to every element of the data_frame news
+"""
+def get_embeds(news):
+    print("Retrieving Embeddable HTML for Tweets")
+    news['url'] = "https://twitter.com/" + news.screen_name + '/status/' + news.tweet_id
+    news['html'] = news.url.apply(get_oembed_link)
+    return news
+
+
 ### Testing Method Definitions
 news = get_new_tweets(names)
 news = add_data(news)
+news = get_embeds(news)
 
+
+# Prints structure of final dataframe
 print("Final DataFrame")
 print(news.head())
 
