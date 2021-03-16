@@ -1,7 +1,0 @@
-The following models (all purposed to classify tweets by news category) are pickled here:
-
-1. logit_model.pkl - Logistic Regression model
-2. mnb_model.pkl - Multinomial Naive Bayes model
-3. svc_model.pkl - Linear SVC models
-
-All models are used in an ensemble like setup to ascertain the final classification of a tweet.

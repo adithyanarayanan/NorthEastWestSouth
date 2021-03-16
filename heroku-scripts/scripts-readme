@@ -1,8 +1,0 @@
-Retaining this directory as is can help in recreating the applictaion on Heroku since no paths in the scripts would have to be changed.
-As and when I change the directories, I will update the path strings in the code to reflect these changes.
-
-Date of Last Change: 3/16/2021
-
-Hosted on: northeastdasher.herokuapp.com
-
-When setting up on heroku- please just commit this folder and heroku will build the app by itself using the procfile, runtime.txt, and requirements.txt.
