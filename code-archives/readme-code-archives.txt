@@ -7,3 +7,7 @@ notebooks- directory that contains all the sandbox notebooks that were used in b
 
 sample-outputs - directory that contains the sample outputs from some initial scripts
 
+
+scripts - directory with initial scripts- inculcated in the heroku-scripts folder
+
+
