@@ -250,8 +250,8 @@ def embellish(news):
 Uploads the necessary files to AWS S3 for app.py to read from
 """
 def upload_to_s3(local_file, bucket, s3_file):
-    s3 = boto3.client('s3', aws_access_key_id="AKIAJ37JNUI5G2R62E4Q",
-                      aws_secret_access_key= "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")
+    s3 = boto3.client('s3', aws_access_key_id="",
+                      aws_secret_access_key= "")
 
     try:
         s3.upload_file(local_file, bucket, s3_file)
