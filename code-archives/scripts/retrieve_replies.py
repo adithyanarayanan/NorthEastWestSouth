@@ -6,10 +6,10 @@
 import pandas as pd
 from TwitterAPI import TwitterAPI, TwitterOAuth, TwitterRequestError, TwitterConnectionError, TwitterPager
 
-consumer_key= "MFg6zCjk0ieHKB9q5oxKkOT2D"
-consumer_secret= "hTIdnRbNs1J6biailaVIogTvhIS8OYm4eLv4PHSOGrSX2RUbeo"
-access_token_key= "2515973623-3XU4n5BkGyyoCAIyicvj08trw5jb82nDCEUmr8E"
-access_token_secret= "2hFyxjowGDZwiF3XzAVaOzSnylfAU5MnTj9PF8jGxBtyT"
+consumer_key= ""
+consumer_secret= ""
+access_token_key= ""
+access_token_secret= ""
 
 
 # Authotizing TwitterAPI
